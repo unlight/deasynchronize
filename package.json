@@ -2,7 +2,7 @@
   "name": "deasynchronize",
   "version": "0.0.0-dev",
   "license": "MIT",
-  "description": "",
+  "description": "Run asynchronous or synchronous function in subprocess and return result synchronously",
   "main": "index.js",
   "typings": "index.d.ts",
   "author": "2020",
@@ -100,5 +100,13 @@
     "type-coverage": "^2.4.0",
     "typescript": "~3.7.5",
     "watchexec-bin": "^1.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unlight/deasynchronize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unlight/deasynchronize/issues"
+  },
+  "homepage": "https://github.com/unlight/deasynchronize#readme"
 }
