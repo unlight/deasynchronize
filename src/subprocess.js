@@ -2,7 +2,9 @@ const getStdin = require('get-stdin');
 
 (async () => {
     const input = await getStdin();
-    const { fn, parameters } = Function(`return ${input};`)();
+
+    const { fn, parameters } = eval(`(${input})`);
+
     try {
         const result = await fn(...parameters);
         process.stdout.write(String(result));

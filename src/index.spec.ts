@@ -48,3 +48,12 @@ it('argument object', () => {
     });
     expect(result).toEqual('1 2 f');
 });
+
+it('require', () => {
+    const result = deasynchronize(async () => {
+        // This is not a closure!
+        const os = require('os');
+        return os.platform();
+    });
+    expect(result).toBeTruthy();
+});
