@@ -22,7 +22,29 @@ it('simple async', () => {
 it('throw error', () => {
     expect(() => {
         deasynchronize(() => {
-            throw new Error();
+            throw new Error('error');
         });
     }).toThrow();
+});
+
+it('sum numbers', () => {
+    const result = deasynchronize(1, 2, 3, (a, b, c) => {
+        return a + b + c;
+    });
+    expect(result).toEqual('6');
+});
+
+it('concat strings', () => {
+    const result = deasynchronize('a', 'b', 'c', (...arguments_) => {
+        return arguments_.join(' ');
+    });
+    expect(result).toEqual('a b c');
+});
+
+it('argument object', () => {
+    const o = { a: 1, b: 2, f: () => 'f' };
+    const result = deasynchronize(o, async object => {
+        return `${object.a} ${object.b} ${object.f()}`;
+    });
+    expect(result).toEqual('1 2 f');
 });

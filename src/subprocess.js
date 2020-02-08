@@ -1,12 +1,11 @@
 const getStdin = require('get-stdin');
 
 (async () => {
-    const code = await getStdin();
+    const input = await getStdin();
+    const { fn, parameters } = Function(`return ${input};`)();
     try {
-        const func = Function(`return ${code}`)();
-        const result = await func();
+        const result = await fn(...parameters);
         process.stdout.write(String(result));
-        process.exit(0);
     } catch (err) {
         process.stderr.write(String(err));
         process.exit(1);
