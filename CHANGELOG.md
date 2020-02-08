@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/unlight/deasynchronize/compare/v1.0.0...v1.0.1) (2020-02-08)
+
+
+### Bug Fixes
+
+* require is not defined in local scope ([94cc5f4](https://github.com/unlight/deasynchronize/commit/94cc5f44bd6bd4742c42c4a3c0b454d5ab0ac14e))
+
 # 1.0.0 (2020-02-08)
 
 
