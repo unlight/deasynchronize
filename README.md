@@ -47,3 +47,7 @@ console.log(result); // => 'Incoming sound is meow'
 ```
 
 Remember, this function is not a closure!
+
+## Similar Packages
+
+-   https://github.com/ForbesLindesay/sync-rpc
