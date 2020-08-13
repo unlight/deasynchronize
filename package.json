@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "get-stdin": "^7.0.0",
-    "serialize-javascript": "^2.1.2",
+    "serialize-javascript": "^4.0.0",
     "tslib": "^1.10.0"
   },
   "husky": {
